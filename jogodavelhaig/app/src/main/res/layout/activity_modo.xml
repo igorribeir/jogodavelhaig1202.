@@ -1,0 +1,46 @@
+<!-- activity_game_mode_selection.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ModoActivity"
+    android:background="@drawable/neymarcr7">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecione o Modo de Jogo"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/botaoMaquina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center"
+        android:text="MAQUINA"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/botaoPVP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/botaoMaquina"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="PLAYER VS PLAYER"
+        android:textColor="@color/black" />
+
+
+</RelativeLayout>
