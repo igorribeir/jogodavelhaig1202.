@@ -6,6 +6,9 @@ import android.view.View
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import com.example.jogodavelhaig.databinding.ActivityMainBinding
+import android.widget.Toast
+import android.content.Intent
+
 
 import kotlin.random.Random
 
@@ -55,14 +58,14 @@ class MaquinaActivity : AppCompatActivity()  {
 
         if(!vencedor.isNullOrBlank()) {
             Toast.makeText(this, "Vencedor: " + vencedor, Toast.LENGTH_LONG).show()
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MaquinaActivity::class.java)
             startActivity(intent)
             finish()
         }
 
         var rX = Random.nextInt(0, 3)
         var rY = Random.nextInt(0, 3)
-var i = 0
+        var i = 0
         while (i < 9) {
             rX = Random.nextInt(0, 3)
             rY = Random.nextInt(0, 3)
@@ -121,7 +124,7 @@ var i = 0
 
         if(!vencedor.isNullOrBlank()) {
             Toast.makeText(this, "Vencedor: " + vencedor, Toast.LENGTH_LONG).show()
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MaquinaActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -147,7 +150,7 @@ var i = 0
         if (tabuleiro[0][2] == tabuleiro[1][1] && tabuleiro[1][1] == tabuleiro[2][0]) {
             return tabuleiro[0][2]
         }
-        //Verifica a quantidade de jogadores 
+        //Verifica a quantidade de jogadores
         var empate = 0
         for (linha in tabuleiro) {
             for (valor in linha) {
